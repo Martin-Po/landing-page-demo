@@ -11,7 +11,7 @@ const Hero = () => {
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
-                    alignItems: 'center',
+                    alignItems: 'center', 
                 }}
             >
                 <Typography sx={{fontWeight:'bold', fontSize:'2rem'}}>
