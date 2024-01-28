@@ -23,6 +23,11 @@ const Servicios = () => {
                 </Typography>
             </Grid>
             <Grid
+                    container 
+                    spacing={1}
+                    sx={{ display: 'flex', }}
+                >
+            <Grid
                 item
                 xs={12}
                 sm={3}
@@ -35,7 +40,7 @@ const Servicios = () => {
 
                 }}
             >
-                <Paper sx={{width: '100%', padding: '1rem',
+                <Paper sx={{width: '100%', height: '100%', padding: '1rem',
                   }}>
                     
                 <Avatar sx={{backgroundColor:'primary.main', width: '4rem', height: '4rem' }} ><img
@@ -66,7 +71,7 @@ const Servicios = () => {
 
                 }}
             >
-                <Paper sx={{width: '100%', padding: '1rem',
+                <Paper sx={{width: '100%', height: '100%', padding: '1rem',
                   }}>
                     
                 <Avatar sx={{backgroundColor:'primary.main', width: '4rem', height: '4rem' }} ><img
@@ -128,7 +133,7 @@ const Servicios = () => {
 
                 }}
             >
-                <Paper sx={{width: '100%', padding: '1rem',
+                <Paper sx={{width: '100%', height: '100%', padding: '1rem',
                   }}>
                     
                 <Avatar sx={{backgroundColor:'primary.main', width: '4rem', height: '4rem' }} ><img
@@ -147,6 +152,8 @@ const Servicios = () => {
                 </Paper>
                 
             </Grid>
+            </Grid>
+
         </>
     )
 }

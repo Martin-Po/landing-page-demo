@@ -54,6 +54,8 @@ const Hero = () => {
                 <img
                     style={{
                         width: '100%',
+                        maxWidth:'471px',
+                        maxHeight:'471px'
                     }}
                     src={HeroImage}
                     alt="Hero"

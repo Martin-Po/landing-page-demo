@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { Servicios } from './components/Servicios';
 import Footer from './components/Footer';
 import { Clientes } from './components/Clientes';
+import { Contacto } from './components/Contacto';
 
 function App() {
   return (
@@ -34,6 +35,8 @@ function App() {
               <Hero/>
               <Servicios/>
               <Clientes/>
+              <Contacto/>
+
               </Grid>
               <Footer/>
 
