@@ -50,6 +50,10 @@ const Clientes = () => {
                         fontWeight: 'bold',
                         fontSize: '2rem',
                         margin: '2rem',
+                        '@media (max-width:600px)': {
+                            marginLeft:'0px',
+                            marginRight:'0px',fontSize:'1.25rem'
+                        },
                     }}
                 >
                     ¿QUE OPINAN MIS CLIENTES?
@@ -92,12 +96,14 @@ const Clientes = () => {
                     container
                     direction="column"
                     spacing={1}
-                    sx={{ display: 'flex', flexDirection: 'column' }}
+                    sx={{ display: 'flex', flexDirection: 'column' ,
+                    marginBottom:'20px'
+                }}
                 >
                     {testimonios.map((testimonio) => {
                         const AvatarImg = AvatarImgs[testimonio.avatar]
                         return (
-                            <Grid
+                            <Grid key={testimonio.id}
                         item
                         xs={4}
                         sx={{
