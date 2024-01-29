@@ -4,7 +4,7 @@ function Footer() {
 
     return (
         <Box
-            sx={{   marginTop:'15px', backgroundColor: 'primary.main', borderBottomLeftRadius: '20px', borderBottomRightRadius: '20px'           , width:'100%'
+            sx={{   marginTop:'15px', backgroundColor: 'primary.main', width:'100%'
 
 
             }}

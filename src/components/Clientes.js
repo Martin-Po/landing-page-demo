@@ -4,8 +4,36 @@ import ClientAvatar1 from '../assets/testimonial_avatar_1.png'
 import ClientAvatar2 from '../assets/testimonial_avatar_2.png'
 import ClientAvatar3 from '../assets/testimonial_avatar_3.png'
 
+const AvatarImgs = {
+    ClientAvatar1,
+    ClientAvatar2,
+    ClientAvatar3,
+    
+}
+
+const testimonios = [
+    {
+        id: 1,
+        avatar: 'ClientAvatar1',
+        text: 'Estoy muy satisfecho con el trabajo que hizo Walter en mi casa. Me pintó las paredes, arregló el techo y me instaló una nueva puerta. Todo quedó impecable y en poco tiempo. Lo recomiendo 100%.',
+        name: 'Marta Gómez',
+    },
+    {
+        id: 2,
+        avatar: 'ClientAvatar2',
+        text: 'Walter es un profesional de primera. Me hizo una reforma integral de mi baño y quedó espectacular. Además, me asesoró sobre los mejores materiales y me dio un presupuesto muy razonable. Sin duda, volveré a contratarlo para futuros proyectos.',
+        name: 'Carlos Pérez',
+    },
+    {
+        id: 3,
+        avatar: 'ClientAvatar3',
+        text: 'No hay nada que Walter no pueda hacer. Me solucionó varios problemas de mantenimiento en mi oficina. Tiene mucha experiencia y se nota en la calidad de su trabajo.',
+        name: 'Lucía Rodríguez',
+    },
+]
 
 const Clientes = () => {
+
     return (
         <>
             <Grid
@@ -35,14 +63,16 @@ const Clientes = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    '@media (max-width:500px)': {
+                        marginBottom: '70px',
+                    },
                 }}
             >
                 <img
                     style={{
                         width: '100%',
-                        
-                        maxWidth:'471px',
-                        maxHeight:'471px'
+                        maxWidth: '471px',
+                        maxHeight: '471px',
                     }}
                     src={ClientesImage}
                     alt="Testimonial"
@@ -59,17 +89,23 @@ const Clientes = () => {
                 }}
             >
                 <Grid
-                    container direction= 'column'
+                    container
+                    direction="column"
                     spacing={1}
                     sx={{ display: 'flex', flexDirection: 'column' }}
                 >
-                    <Grid
+                    {testimonios.map((testimonio) => {
+                        const AvatarImg = AvatarImgs[testimonio.avatar]
+                        return (
+                            <Grid
                         item
                         xs={4}
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            alignItems: 'center',
+                            alignItems: 'center', '@media (max-width:500px)': {
+                                marginBottom: '40px',
+                            },
                         }}
                     >
                         <Paper
@@ -80,71 +116,14 @@ const Clientes = () => {
                                 borderRadius: '30px',
                             }}
                         >
-                            <Grid container >
-                                <Grid
-                                    item
-                                    xs={3}
-                                    sx={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center', 
-                                    }}
-                                >
-                                    <Avatar
-                                        sx={{
-                                            backgroundColor: 'primary.main',
-                                            width: '5.5rem',
-                                            height: '5.5rem',
-                                        }}
-                                    >
-                                        <img
-                                            style={{
-                                                width: '5.5rem',
-                                                height: '5.5rem',
-                                            }}
-                                            src={ClientAvatar1}
-                                            alt="Icono Carpintería"
-                                        />
-                                    </Avatar>
-                                </Grid>
-                                <Grid item xs={9} sx={{display: 'flex', flexDirection:'column' }}>
-                                    <Typography sx={{ fontSize: '0.85rem' }}>
-                                        Estoy muy satisfecho con el trabajo que
-                                        hizo Walter en mi casa. Me pintó las
-                                        paredes, arregló el techo y me instaló
-                                        una nueva puerta. Todo quedó impecable y
-                                        en poco tiempo. Lo recomiendo 100%.
-                                    </Typography>
-                                    <Typography
-                                        sx={{
-                                            fontWeight: 'bold',
-                                            placeSelf: 'flex-end',
-                                        }}
-                                    >
-                                        Marta Gómez
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                    </Grid>
-                    <Grid
-                        item
-                        xs={4}
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Paper
-                            sx={{
-                                width: '100%',
-                                padding: '1rem',
-                                margin: '10px',
-                                borderRadius: '30px',
-                            }}
-                        >
-                            <Grid container >
+                            <Grid
+                                container
+                                sx={{
+                                    '@media (max-width:500px)': {
+                                        flexDirection: 'column',
+                                    },
+                                }}
+                            >
                                 <Grid
                                     item
                                     xs={3}
@@ -152,6 +131,11 @@ const Clientes = () => {
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
+
+                                        '@media (max-width:500px)': {
+                                            alignSelf: 'center',
+                                            marginTop: '-64px',
+                                        },
                                     }}
                                 >
                                     <Avatar
@@ -166,75 +150,24 @@ const Clientes = () => {
                                                 width: '5.5rem',
                                                 height: '5.5rem',
                                             }}
-                                            src={ClientAvatar2}
+                                            src={AvatarImg}
                                             alt="Icono Carpintería"
                                         />
                                     </Avatar>
                                 </Grid>
-                                <Grid item xs={9} sx={{ display: 'flex', flexDirection:'column' }}>
-                                    <Typography sx={{ fontSize: '0.85rem' }}>
-                                    Walter es un profesional de primera. Me hizo una reforma integral de mi baño y quedó espectacular. Además, me asesoró sobre los mejores materiales y me dio un presupuesto muy razonable. Sin duda, volveré a contratarlo para futuros proyectos.
-                                    </Typography>
-                                    <Typography
-                                        sx={{
-                                            fontWeight: 'bold',
-                                            placeSelf: 'flex-end',
-                                        }}
-                                    >
-                                        Carlos Pérez
-                                    </Typography>
-                                </Grid>
-                            </Grid>
-                        </Paper>
-                    </Grid>
-                    <Grid
-                        item
-                        xs={4}
-                        
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Paper
-                            sx={{
-                                width: '100%',
-                                padding: '1rem',
-                                margin: '10px',
-                                borderRadius: '30px',
-                            }}
-                        >
-                            <Grid container >
                                 <Grid
                                     item
-                                    xs={3}
+                                    xs={9}
                                     sx={{
                                         display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
+                                        flexDirection: 'column',
+                                        '@media (max-width:500px)': {
+                                            maxWidth: '100%',
+                                        },
                                     }}
                                 >
-                                    <Avatar
-                                        sx={{
-                                            backgroundColor: 'primary.main',
-                                            width: '5.5rem',
-                                            height: '5.5rem',
-                                        }}
-                                    >
-                                        <img
-                                            style={{
-                                                width: '5.5rem',
-                                                height: '5.5rem',
-                                            }}
-                                            src={ClientAvatar3}
-                                            alt="Icono Carpintería"
-                                        />
-                                    </Avatar>
-                                </Grid>
-                                <Grid item xs={9} sx={{ display: 'flex', flexDirection:'column' }}>
                                     <Typography sx={{ fontSize: '0.85rem' }}>
-                                    No hay nada que Walter no pueda hacer. Me solucionó varios problemas de mantenimiento en mi oficina. Tiene mucha experiencia y se nota en la calidad de su trabajo. 
+                                        {testimonio.text}
                                     </Typography>
                                     <Typography
                                         sx={{
@@ -242,12 +175,17 @@ const Clientes = () => {
                                             placeSelf: 'flex-end',
                                         }}
                                     >
-                                        Lucía Rodríguez
+                                        {testimonio.name}
                                     </Typography>
                                 </Grid>
                             </Grid>
                         </Paper>
                     </Grid>
+                        )   
+                            
+
+                    })}
+                    
                 </Grid>
             </Grid>
         </>
