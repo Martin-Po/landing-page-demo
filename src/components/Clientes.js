@@ -3,6 +3,7 @@ import ClientesImage from '../assets/testimony_images.png'
 import ClientAvatar1 from '../assets/testimonial_avatar_1.png'
 import ClientAvatar2 from '../assets/testimonial_avatar_2.png'
 import ClientAvatar3 from '../assets/testimonial_avatar_3.png'
+import React from 'react';
 
 const AvatarImgs = {
     ClientAvatar1,
@@ -75,11 +76,12 @@ const Clientes = () => {
                 }}
             >
                 <img
-                    style={{
+                    style={{                        
                         width: '100%',
                         maxWidth: '471px',
                         maxHeight: '471px',
                     }}
+                    loading='lazy'
                     src={ClientesImage}
                     alt="Testimonial"
                 />

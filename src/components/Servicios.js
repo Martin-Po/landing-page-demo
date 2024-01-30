@@ -5,20 +5,22 @@ import IconoCarpinteria from '../assets/icono_carpinteria.png'
 import IconoElectricidad from '../assets/icono_electricidad.png'
 import IconoPintura from '../assets/icono_pintura.png'
 import IconoPisos from '../assets/icono_pisos.png'
+import IconoRemodelaciones from '../assets/icono_remodelaciones.png'
 
 const iconoServicios = {
     IconoCarpinteria,
     IconoElectricidad,
     IconoPintura,
     IconoPisos,
+    IconoRemodelaciones
 }
 
 const servicios = [
     {
         id: 1,
-        icono: 'IconoCarpinteria',
-        title: 'Carpintería',
-        text: 'Realizo todo tipo de trabajos de carpintería, desde pequeñas reparaciones hasta grandes proyectos.',
+        icono: 'IconoRemodelaciones',
+        title: 'Remodelaciones',
+        text: 'Realizo todo tipo de trabajos de remodelaciones, desde pequeñas reparaciones hasta grandes proyectos.',
     },
     {
         id: 2,

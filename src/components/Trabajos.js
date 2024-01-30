@@ -11,10 +11,10 @@ import {
 } from '@mui/material'
 import HeroImage from '../assets/hero_image.png'
 import Avatar from '@mui/material/Avatar'
-import TrabajoEntrada from '../assets/trabajos/finales/Entrada_despues.jpg'
-import TrabajoCocina from '../assets/trabajos/finales/cocina_después.jpg'
-import TrabajoPintura from '../assets/trabajos/finales/pintura_despues.jpg'
-import TrabajoRemodelacion from '../assets/trabajos/finales/remodelacion_despues.png'
+import TrabajoEntrada from '../assets/trabajos/thumbnails/Entrada_despues.jpg'
+import TrabajoCocina from '../assets/trabajos/thumbnails/cocina_después.jpg'
+import TrabajoPintura from '../assets/trabajos/thumbnails/pintura_despues.jpg'
+import TrabajoRemodelacion from '../assets/trabajos/thumbnails/remodelacion_despues.png'
 
 const imagenesTrabajos = {
     TrabajoEntrada,
@@ -26,27 +26,27 @@ const imagenesTrabajos = {
 const trabajos = [
     {
         id: 1,
-        title: 'Trabajo Entrada',
-        img: 'TrabajoEntrada',
-        text: 'Realizo todo tipo de trabajos de carpintería, desde pequeñas reparaciones hasta grandes proyectos.',
+        title: 'Remodelacion entrada',
+        thumbnail: 'TrabajoEntrada',
+        text: 'Emprolijamiento del patio, instalación de piedra partida en la entrada y  pintada pared medianera .',
     },
     {
         id: 2,
-        title: 'Trabajo Cocina',
-        img: 'TrabajoCocina',
-        text: 'Ofrezco servicios de electricidad básicos, como instalaciones, reparaciones, mantenimiento, y conexiones eléctricas.',
+        title: 'Instalacion cocina',
+        thumbnail: 'TrabajoCocina',
+        text: 'Preparación e instalació de pisos y paredes de cocina, preparado y presentación de mueble bajo mesada para instalación',
     },
     {
         id: 3,
-        title: 'Trabajo Pintura',
-        img: 'TrabajoPintura',
-        text: 'Realizo todo tipo de trabajos de pintura de casas, tanto interiores como exteriores.',
+        title: 'Pintura exterior',
+        thumbnail: 'TrabajoPintura',
+        text: 'Pintado completo de exterior de casa, barnizado y emprolijamiento de deck de madera',
     },
     {
         id: 4,
-        title: 'Trabajo Remodelacion',
-        img: 'TrabajoRemodelacion',
-        text: 'Realizo todo tipo de trabajos de instalación y reparación de suelos, tanto de madera, cerámica, vinilo, como de otros materiales.',
+        title: 'Emprolijamiento entrada',
+        thumbnail: 'TrabajoRemodelacion',
+        text: 'Finalización de detalles en la obra y pintada externa del domicilio.',
     },
 ]
 
@@ -84,7 +84,7 @@ const Trabajos = () => {
                 sx={{ display: 'flex', marginBottom: '20px' }}
             >
                 {trabajos.map((trabajo) => {
-                    const imgTrabajo = imagenesTrabajos[trabajo.img]
+                    const imgTrabajo = imagenesTrabajos[trabajo.thumbnail]
 
                     return (
                         <Grid
@@ -96,14 +96,15 @@ const Trabajos = () => {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
-                                paddingTop:'1rem',
-                                paddingBottom:'1rem'
+                                paddingTop: '1rem',
+                                paddingBottom: '1rem',
                             }}
                         >
                             <Card sx={{ maxWidth: '80%' }}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
+                                        loading="lazy"
                                         height="140"
                                         image={imgTrabajo}
                                         alt={imgTrabajo}
@@ -120,7 +121,7 @@ const Trabajos = () => {
                                             variant="body2"
                                             color="text.secondary"
                                         >
-                                           {trabajo.text}
+                                            {trabajo.text}
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
