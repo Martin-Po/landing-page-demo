@@ -67,6 +67,8 @@ const Clientes = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    marginBottom:'20px',
+
                     '@media (max-width:500px)': {
                         marginBottom: '70px',
                     },

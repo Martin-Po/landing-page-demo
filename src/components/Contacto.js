@@ -1,18 +1,19 @@
 import { Button, Grid, Typography } from '@mui/material'
 
-const ContactButtons = [{
-    id: 1,
-    text: 'Quiero realizar una reforma en mi casa'
-
-},{
-    id: 2,
-    text: 'Quiero pintar el experior de mi casa'
-
-},{
-    id: 3,
-    text: '¿Qué otros tipo de trabajos realizas?'
-
-},]
+const ContactButtons = [
+    {
+        id: 1,
+        text: 'Quiero realizar una reforma en mi casa',
+    },
+    {
+        id: 2,
+        text: 'Quiero pintar el experior de mi casa',
+    },
+    {
+        id: 3,
+        text: '¿Qué otros tipo de trabajos realizas?',
+    },
+]
 
 const Contacto = () => {
     return (
@@ -44,8 +45,9 @@ const Contacto = () => {
                     sx={{
                         marginTop: '1rem',
                         fontWeight: '300',
-                        fontSize: '1.25rem','@media (max-width:600px)': {
-                            fontSize:'1rem'
+                        fontSize: '1.25rem',
+                        '@media (max-width:600px)': {
+                            fontSize: '1rem',
                         },
                     }}
                 >
@@ -73,48 +75,52 @@ const Contacto = () => {
                     spacing={1}
                     sx={{ display: 'flex', flexDirection: 'column' }}
                 >
-                    {ContactButtons.map((ContactButton => {return (
-                        <Grid
-                        item
-                        key={ContactButton.id}
-                        xs={4}
-                        sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                        }}
-                    >
-                        <Button
-                            sx={{
-                                marginTop: '1.5rem',
-                                paddingTop: '0.75rem',
-                                paddingBottom: '0.75rem',
-                                paddingLeft: '2rem',
-                                paddingRight: '2rem',
-                                borderRadius: '35px',
-                                fontSize: '1.125rem',
-                                backgroundColor: 'primary.main',
-                                width: '100%',
-                                maxWidth: '405px',
-                                '@media (max-width:600px)': {  paddingLeft: '1rem',
-                                paddingRight: '1rem', }
-                                
-                            }}
-                            variant="contained"
-                        >
-                            <Typography
+                    {ContactButtons.map((ContactButton) => {
+                        return (
+                            <Grid
+                                item
+                                key={ContactButton.id}
+                                xs={4}
                                 sx={{
-                                    color: 'secondary.contrastText',
-                                    fontWeight: 'bold',
-                            '@media (max-width:500px)': { fontSize: '0.7rem' },
-
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    alignItems: 'center',
                                 }}
                             >
-                                {ContactButton.text}
-                            </Typography>
-                        </Button>
-                    </Grid>
-                    )}))}
+                                <Button
+                                    sx={{
+                                        marginTop: '1.5rem',
+                                        paddingTop: '0.75rem',
+                                        paddingBottom: '0.75rem',
+                                        paddingLeft: '2rem',
+                                        paddingRight: '2rem',
+                                        borderRadius: '35px',
+                                        fontSize: '1.125rem',
+                                        backgroundColor: 'primary.main',
+                                        width: '100%',
+                                        maxWidth: '405px',
+                                        '@media (max-width:600px)': {
+                                            paddingLeft: '1rem',
+                                            paddingRight: '1rem',
+                                        },
+                                    }}
+                                    variant="contained"
+                                >
+                                    <Typography
+                                        sx={{
+                                            color: 'secondary.contrastText',
+                                            fontWeight: 'bold',
+                                            '@media (max-width:500px)': {
+                                                fontSize: '0.7rem',
+                                            },
+                                        }}
+                                    >
+                                        {ContactButton.text}
+                                    </Typography>
+                                </Button>
+                            </Grid>
+                        )
+                    })}
                 </Grid>
             </Grid>
         </>

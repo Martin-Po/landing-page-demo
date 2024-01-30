@@ -50,7 +50,6 @@ const Servicios = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    
                 }}
             >
                 <Typography
@@ -58,17 +57,21 @@ const Servicios = () => {
                         fontWeight: 'bold',
                         fontSize: '2rem',
                         margin: '2rem',
-                                                '@media (max-width:600px)': {
-                                                    marginLeft:'0px',
-                                                    marginRight:'0px',fontSize:'1.25rem'
-                                                },
+                        '@media (max-width:600px)': {
+                            marginLeft: '0px',
+                            marginRight: '0px',
+                            fontSize: '1.25rem',
+                        },
                     }}
                 >
                     ¿COMO PUEDO AYUDARTE?
                 </Typography>
             </Grid>
-            <Grid container spacing={1} sx={{ display: 'flex',
-                    marginBottom:'20px' }}>
+            <Grid
+                container
+                spacing={1}
+                sx={{ display: 'flex', marginBottom: '20px' }}
+            >
                 {servicios.map((servicio) => {
                     const iconoServicio = iconoServicios[servicio.icono]
 
