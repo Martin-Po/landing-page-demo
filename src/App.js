@@ -13,12 +13,11 @@ function App() {
   return (
     <div style={{backgroundColor: '#B1DBED',  minHeight: '100vh', position: 'relative', display:'flex', flexDirection:'column', alignItems:'center' }}>
             <CssBaseline />
-            <AppBar/>
             <Grid
                 container
                 
                 sx={{
-                  margin: '0 auto',
+                  margin: '50px auto 0 auto',
                   width: '1280px',
                   display: 'flex',
                   justifyContent: 'space-evenly',

@@ -4,7 +4,7 @@ function Footer() {
 
     return (
         <Box
-            sx={{   marginTop:'15px', backgroundColor: 'primary.main', width:'100%'
+            sx={{   marginTop:'50px', backgroundColor: 'primary.main', width:'100%'
 
 
             }}
@@ -25,8 +25,8 @@ function Footer() {
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
-                    paddingTop: '1.5rem',
-                    paddingBottom: '1.5rem',
+                    paddingTop: '1rem',
+                    paddingBottom: '1rem',
                 }}
             >
                 <Typography variant="h2" fontSize="1rem" fontWeight="500" opacity='0.85'>
