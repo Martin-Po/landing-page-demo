@@ -38,8 +38,7 @@ const Hero = () => {
                     Soy Walter, un contratista con más de 30 de experiencia en
                     el sector. Realizo todo tipo de trabajos de albañilería,
                     mantenimiento y carpintería, desde pequeñas reparaciones
-                    hasta reformas integrales. Me adapto a tus necesidades y
-                    presupuesto, y te garantizo un servicio de calidad y
+                    hasta reformas integrales. Me adapto a tus necesidades y te garantizo un servicio de calidad y
                     puntualidad.
                 </Typography>
                 <Button
