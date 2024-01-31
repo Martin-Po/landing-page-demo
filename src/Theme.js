@@ -23,6 +23,21 @@ const theme = createTheme({
       "fontFamily": "Outfit, sans-serif",
     "color":'rgb(68 86 108)'
   }
+  ,
+  paperCustom: {
+    padding: "2rem",
+    fontFamily: "roboto",
+    margin: "2rem",
+    minHeight: window.innerHeight,
+    borderRadius: 0
+  },
+  typographyCustom: {
+    marginBottom: "1rem"
+  },
+  dividerCustom: {
+    marginTop: "2rem"
+  }
+  
   });
 
   export { theme }
